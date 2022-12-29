@@ -1,113 +1,50 @@
+/* 320 x 568 */
+
 *{
-    /* background-color: aquamarine; */
     margin:0;
     padding: 0;
-    /* overflow: hidden; */
 }
 .nav{
-    /* background-color: rebeccapurple; */
-    min-height: 10vh;
+    background-color: rebeccapurple;
+    min-height: 8vh;
 }
-.home{
-    /* background-color: aliceblue; */
-    min-height: 85vh;
+
+#home{
+    /* background-color: rgb(109, 155, 225); */
+    height: 70vh;
+    display: flex;justify-content: center;align-items: center;
+    overflow: hidden;
+}
+#home-center{
+    /* background-color: brown; */
+    display: flex;
+    height: 70vh;align-items: center;
     position: relative;
-    display: flex;
-    justify-content: center;
-}
-.home-image-image{
-    /* max-width: 300px; */
-    max-height: 40vh;
-    
-    z-index: 0;
-
-    /* position: absolute; */
-}
-.home-image{
-    z-index: 0;
-    /* background-color: firebrick; */
-    position: absolute;
-    top: 15%;
-    transform:translateX(-5vw);
     overflow: visible;
+    transform: translate(-15%,0%);
+
 }
-.home-text{
-    z-index: 10;
+#home-center-image{
+    width: clamp(250px,40vw,400px);
+    /* min-width: 300px; */
+    /* transform: translate(-30%,-10%); */
+
+}
+
+
+.home-center-text{
+    position: absolute;width: 100%;
+    /* background-color: aqua; */
     font-family: 'Bebas Neue', cursive;
-    /* background-color: aquamarine; */
-    font-size: 8vh;
-    transform:translate(29%,-220%);
-    /* transform:translateY(-30%); */
+    font-size:  clamp(50px,8vw,80px);
+    transform:translate(32%,30%);
     display: flex;
+    z-index: 3;color: aliceblue;
 }
-.home-text-1{
-    color: aliceblue;
-    margin-right: 3%;
+.home-text-2{
+    margin-left: 3%;color: black;
 }
-.home-text-upper{
-    /* background-color: blue; */
-    z-index: 15;
-    transform:translate(0,40%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-style: italic;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 2vh;
-    color: rgb(236, 238, 255);
 
-}
-.home-text-upper-lower{
-    font-size: 3.5vh;
-    font-weight: 400;
-    font-family: 'Bebas Neue', cursive;
-    font-style: normal;
-
-}
-.home-lower{
-
-    position: absolute;
-    align-self: flex-end;
-    z-index: 30;
-    height: 15vh;
-    width: 100%;
-    /* background-color:yellow; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.home-lower div{
-    height: 5vh;
-    width: 14vh;
-    background: #e1ebdcff; 
-
-    border: 2px solid black;
-    margin: 2%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Bebas Neue', cursive;
-}
-.home-date{
-    color: rgb(236, 238, 255);
-    
-    /* margin-top: ; */
-    position: absolute;
-    transform: translateY(60vh);
-    /* background-color: cadetblue; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* font-family: 'Bebas Neue', cursive; */
-    font-family: 'Comfortaa', cursive;
-}
-.home-date-lower{
-    font-weight: 1000;
-    font-size: 3vh;
-    /* font-style: italic; */
-}
 #playArea {
     position: absolute;
     background: #e1ebdcff; 
@@ -116,40 +53,379 @@
  }
 
 
- #home-background-blur{
+
+
+
+
+
+
+ /* ayush */
+ 
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+* {
+    /* box-sizing: border-box; */
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --white: #e1ebdcff;
+    --black:#101010;
+    --opacity-green:rgb(24, 186, 48);
+    --primary-color:#00C805;
+}
+body{
+    /* background-color:var(--white); */
+    /* background-repeat: no-repeat; */
+    /* background-position: center; */
+}
+html {
+    scroll-behavior: smooth;
+    /* overflow-x: hidden; */
+}
+
+p::selection{
+    color: red;
+}
+
+.navbar{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3rem;
     width: 100%;
-    height: 100%;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    border-bottom: 1px solid var(--black);
+    z-index: 999;
+    background-color: white;
+}
+.navigation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo{
+    border-right: 1px solid var(--black);
+}
+
+.logo img{
+    max-width: 10rem;
+    margin: 1.2rem 2rem 1rem;
+    cursor: pointer;
+}
+
+li{
+    list-style: none;
+}
+
+.navigation li a{
+    color: var(--black);
+    /* font-family: 'Roboto'; */
+
+    font-family: 'Bebas Neue', cursive;
+
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s ease-in;
+    margin: 0.7rem 1rem 0.4rem;
+    font-size: 1.4rem;
+    padding-bottom: 0.3rem;
+}
+.navigation li a:hover{
+    border-color: var(--primary-color);
+}
+.navigation:hover li a:not(:hover){
+    opacity: 0.3;
+    filter: blur(1px);
+}
+.menu-btn{
+    width: 1.8rem;
+    height: 1.8rem;
+    display: none;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    cursor: pointer;
+    margin-right: 1.5rem;
+}
+.menu-btn_burger{
+    width: 1.8rem;
+    height: 0.1rem;
+    background-color: var(--black);
+    border-radius: 1rem;
+    transition: all 0.5s ease-in-out;
+}
+.menu-btn_burger::before,.menu-btn_burger::after{
+    content: '';
     position: absolute;
-    background-color: rgba(6, 17, 17, 0.562);
-    z-index: -999;
- }
+    width: 1.8rem;
+    height: 0.1rem;
+    background-color: var(--black);
+    border-radius: 1rem;
+    transition: all 0.5s ease-in-out;
+}
+.menu-btn_burger::before{
+    transform: translateY(-0.5rem);
+}
+.menu-btn_burger::after{
+    transform: translateY(0.5rem);
+}
 
-.testing1{
-    height: 100%;width: 100%;
-    /* background-color: yellow; */
+/* Animation */
+.menu-btn.open .menu-btn_burger {
+    transform: translateX(-50px);
+    background: transparent;
+  }
+  .menu-btn.open .menu-btn_burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+  }
+  .menu-btn.open .menu-btn_burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+  }
 
+  /* Responsive navbar */
+@media screen and (width <= 48rem) {
+    .navbar{
+        justify-content: space-between;
+    }
+    .navigation{
+        overflow-y: hidden;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--opacity-green);
+        top: 3.593rem;
+        left: 0;
+        transition: all .5s linear;
+        gap: 0;
+        padding: 1rem 2rem;
+        transform: scale(0);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        overflow-x: hidden;
+        transition: all 0.4s ease-in;
+    }
+    .navigation li a{
+        font-size: 1.5rem;
+    }
+    .navigation:hover li a:not(:hover){
+        opacity: 1;
+        filter: blur(0);
+    }
+    .navigation.hamburger{
+        visibility: visible;
+        pointer-events: all;
+        overflow-x: auto;
+        opacity: 1;
+        transform: scale(1);
+    }
+    .navigation li a:hover{
+        border-color: var(--white);
+    }
+    .menu-btn{
+        display: flex;
+    }
+    .logo{
+        border: none;
+    }
 }
 
 
-/*  
-What if i've never been to a hackathon before?
-Perfect! We welcome hackers of all experience levels and backgrounds. We will be providing resources and workshops to help new hackers get started on projects and learn new technologies. There will also be mentors at the event to help guide you.
-
-Can I come with a project pre-built or will I have to build from scratch?   
-You will be building your project from scratch. However, feel free to come with ideas of what you want to build!   
-
-How many people can be on a team?
-Up to 4 hackers can be on a team.
-
-What do I need? 
-An open mind, laptop, charger, and anything else you would need to hack!
-
-Does this event cost money to attend? 
-No, admission to the event is free! We will also be providing workshops and activities throughout the weekend, as well as virtual swag!
-
-Who can participate? 
-We hope this event inspires and highlights high school, undergraduate, and graduate students identifying as women or allies to hack. There are also opportunities to participate as mentors and volunteers to support!
-
- */
 
 
+
+
+/* about page */
+.container {
+    width: 100%;
+    max-width: 65em;
+    margin: 0 auto;
+    padding: 2rem 0;
+
+}
+
+h2 {
+    font-size: 5rem;
+}
+.about-content{
+    display: flex;
+    gap: 1rem;
+    flex-direction: column-reverse;
+    margin-top: 1rem;
+}
+.content {
+    display: flex;
+    gap: 1rem;
+    max-width: 32em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto';
+    font-size: 1rem;
+    word-spacing: .5rem;
+    padding: 1rem 1rem 1rem 2rem;
+}
+
+.image {
+    max-width: 28em;
+    padding: 1rem;
+}
+
+.image img {
+    width: 100%;  
+}
+
+.heading {
+    position: relative;
+    padding-left: 3rem;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+}
+.back-heading {
+    font-size: 4rem;
+    color: rgb(139 131 131 / 10%);
+    /* font-family: 'Ubuntu'; */
+    font-family: 'Bebas Neue', cursive;
+
+    user-select: none;
+}
+.front-heading {
+    position: absolute;
+    font-size: 1.8rem;
+    bottom: 0.5rem;
+    left: 2rem;
+    color: var(--primary-color);
+    font-family: 'Bebas Neue', cursive;
+    
+}
+@media screen and (width >= 48em){
+    .back-heading{
+        font-size: 7rem;
+    } 
+    .front-heading{
+        font-size: 3rem;
+        bottom: 1rem;
+        left: 1.5rem;
+    }
+    .about-content{
+        flex-direction: row;
+    }
+    .content{
+        font-size: 1.2rem;
+    }
+}
+
+
+
+
+/* faq */
+
+#faqs-section{
+    background-color: #00C805;
+    box-sizing: border-box;
+    
+}
+.extra{
+    color: #2a2929;
+}
+.faqs-heading{
+    /* margin-bottom: 2rem; */
+    align-self: flex-start;
+    margin-bottom: 4rem;
+    /* margin-top: 2rem; */
+}
+.accordion{
+    /* padding: 1rem; */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content:center;
+}
+.accordion-item{
+    background-color: rgba(255,255,255, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding:1rem;
+    width: 80vw;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+   border-radius: 1rem 0rem;
+   box-shadow: inset 0 0.01rem 0.2rem var(--primary-color);
+}
+.accordion-link{
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-family: 'Ubuntu';
+    /* border-bottom: 1px solid black; */
+    cursor: pointer;
+    overflow: hidden;
+    padding: 1rem 0;
+    color: var(--black);
+}
+.accordion-link i{
+    padding: 0.5rem;
+    transition: all 0.3s ease-in;
+}
+.answer{
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--opacity-green);
+    transition: all 0.3s ease-in;
+}
+.answer::before{
+    content: "";
+    width: 0.2rem;
+    height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background-color: var(--black);
+    transform: translateY(-50%);
+}
+.answer p{
+    width: 100%;
+    font-size: 1.2rem;
+    font-family: Roboto;
+    padding: 1rem;
+    color: var(--black);
+}
+.open-accordian{
+    max-height: 15rem;
+}
+.rotate-plus{
+    transform: rotate(45deg);
+}
+.faq-section{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+/* @media screen and (width >= 48em){
+    #question3, #question4{
+        width: 100%;
+        max-width: 62.4em;
+    }
+} */
