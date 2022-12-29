@@ -9,21 +9,49 @@ window.requestAnimFrame = (function(){
             };
   })();
   
+
+
+  // $(function(){
+//   });
   
-  $(function(){
-    $(window).resize(function(){
-      $("#playArea").attr({
-        'width': $('body').width(),
-        'height': $('body').height()
-      });
-      
-      width = $('body').width();
-      height = $('body').height();
-      
-    });
-    $(window).resize();
-  });
+document.addEventListener("DOMContentLoaded", function() {
+
+
   
+  // $(window).resize(function(){    
+  // });
+  window.addEventListener("resize", function(){
+
+    
+    // $("#playArea").attr({
+    //       'width': $('.home').width(),
+    //       'height': $('.home').height()
+    //     });
+    document.getElementById("playArea").setAttribute("width",document.getElementById("homie").clientWidth);
+    document.getElementById("playArea").setAttribute("height",document.getElementById("homie").clientHeight);
+    //
+
+
+          width = document.getElementById("homie").clientWidth;
+          height =document.getElementById("homie").clientHeight;
+
+          
+})
+
+
+  // $(window).resize();
+  window.dispatchEvent(new Event('resize'));
+
+});
+
+
+
+  
+  // item.setAttribute('href');
+
+
+
+
   var Point = function(){
     this._size = 0.5;
     this._x = 0;
@@ -134,15 +162,18 @@ window.requestAnimFrame = (function(){
   
   var aPoints = [];
   var can, ctx, interval, width, height;
-  var numPoints = 50;
+  var numPoints = 30;
   /* var distanceTreshold = 100; */
   
   function init() {
     can = document.getElementById("playArea");
     ctx = can.getContext("2d");
-    width = $('body').width();
-    height = $('body').height();
-    
+    height = document.getElementById("homie").clientHeight;
+    width = document.getElementById("homie").clientWidth;
+    console.log(height);
+
+    // width = document.getElementById('homie').
+
     for(x=0; x<numPoints; x++){
       var newPoint = new Point();
       newPoint._size = (Math.random() * (3 - 0.5) + 0.5).toFixed(2);
