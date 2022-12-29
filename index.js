@@ -163,7 +163,7 @@ var Point = function(){
 
 var aPoints = [];
 var can, ctx, interval, width, height;
-var numPoints = 30;
+var numPoints = 20;
 /* var distanceTreshold = 100; */
 
 function init() {
