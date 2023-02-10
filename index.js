@@ -300,3 +300,26 @@ accSix.addEventListener("click", () =>{
   ansSix.classList.toggle('open-accordian');
   plusSix.classList.toggle('rotate-plus');
 })
+
+
+
+//tracks
+
+
+const tracksflipcard = document.querySelectorAll('.flip-card');
+// console.log(tracksflipcard);
+for (let i = 0; i < tracksflipcard.length; i++) {
+
+    tracksflipcard[i].addEventListener('click',()=>{
+      var e = document.querySelectorAll('.flip-card-inner');
+      console.log(e[i].style);
+      if(e[i].style.transform == ""){
+          e[i].style.transform = "rotateY(180deg)";
+      }else{
+        e[i].style.transform = "";
+      }
+      //
+      // tracksflipcard[i].target.style.color = "white";
+
+    });
+}
