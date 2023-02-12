@@ -14,8 +14,9 @@
     display: flex;justify-content: center;align-items: center;
     overflow: hidden;
     padding: 2%;
+    margin-top: 60px;
 }
-#home-center{
+#home-center{   
     /* background-color: brown; */
     display: flex;
     height: 70vh;align-items: center;
@@ -179,6 +180,7 @@ html {
     position: fixed;
     align-items: center;
     justify-content: flex-end;
+    border-bottom: 1px solid;
 }
 
 .nav-slide{
@@ -201,13 +203,47 @@ html {
 }
 
 .nav-menu{
+    position: absolute;
+    left: 200px;
     display: none;
+    justify-self: center;
+    /* background-color: #636963; */
+    /* width: 100%; */
+    align-items: end;
+    justify-content: flex-end;
+    /* align-content: space-between; */
+    /* flex-direction: row; */
 }
+.nav-menu div{
+    border: 1px solid;
+    margin: 0 5px;
+}
+.nav-menu a{
+    font-size: 2    vw;
+
+    text-decoration:none;
+}
+
+
+.nav-logo{
+    /* background-color: #00C805; */
+    border: 1px black solid;
+    width: 200px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 .nav-ham{
     /* justify-self: flex-end; */
     /* display: block; */
     position: relative;
+    margin-right: 15px;
+
 }
 .nav-ham span{
     display: block;
@@ -225,14 +261,11 @@ html {
     background-color: #00d029;
 }
 
-.nav-ham:hover span:nth-child(2){
-    transform:translateX(10px);
-    background-color: #00d029;
-}
 
-/* .nav-ham span:nth-child(2){
+
+.nav-ham span:nth-child(2){
     transition: 0.8s ease-in-out;
-} */
+}
 
 .nav-ham.is-active span:nth-child(1){
     transform:translate(0px,-2px) rotate(45deg)
@@ -240,7 +273,9 @@ html {
 
 .nav-ham.is-active span:nth-child(2){
     opacity: 0;
+    /* background-color: #00C805; */
     transform:translate(15px);
+    /* background-color: #101010; */
 }
 .nav-ham.is-active span:nth-child(3){
     transform:translate(-3px,3px) rotate(-45deg)
@@ -251,7 +286,7 @@ html {
         display: none;
     }
     .nav-menu{
-        display: block;
+        display: flex;
     }
 }
 
@@ -263,10 +298,6 @@ html {
 
 
 
-
-/* <a href="https://www.flaticon.com/free-icons/video-game" title="video game icons">Video game icons created by Freepik - Flaticon</a> */
-/* <a href="https://www.flaticon.com/free-icons/chip" title="chip icons">Chip icons created by Freepik - Flaticon</a>
-/* <a href="https://www.flaticon.com/free-icons/hiring" title="hiring icons">Hiring icons created by Uniconlabs - Flaticon</a> */
 
 
 /* /highlights  */
