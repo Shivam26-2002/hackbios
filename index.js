@@ -227,29 +227,29 @@ const preventScroll = (e) => {
 
   return false;
 }
-const menu_btn = document.querySelector('.menu-btn');
-const navigation = document.querySelector('.navigation');
-const navbar = document.querySelector('.navbar'); //just to prevent schroll behavior
-let menuOpen = false;
-menu_btn.addEventListener("click",()=>{
-  if(!menuOpen){
-      menu_btn.classList.add("open");
-      navigation.classList.add("hamburger");
-      navbar.addEventListener("wheel", preventScroll);
-      menuOpen = true;
-  }
-  else{
-      menu_btn.classList.remove("open");
-      navigation.classList.remove("hamburger");
-      menuOpen = false;
-  }
-});
+// const menu_btn = document.querySelector('.menu-btn');
+// const navigation = document.querySelector('.navigation');
+// const navbar = document.querySelector('.navbar'); //just to prevent schroll behavior
+// let menuOpen = false;
+// menu_btn.addEventListener("click",()=>{
+//   if(!menuOpen){
+//       menu_btn.classList.add("open");
+//       navigation.classList.add("hamburger");
+//       navbar.addEventListener("wheel", preventScroll);
+//       menuOpen = true;
+//   }
+//   else{
+//       menu_btn.classList.remove("open");
+//       navigation.classList.remove("hamburger");
+//       menuOpen = false;
+//   }
+// });
 
-navigation.addEventListener("click", () =>{
-  menu_btn.classList.remove("open");
-      navigation.classList.remove("hamburger");
-      menuOpen = false;
-})
+// navigation.addEventListener("click", () =>{
+//   menu_btn.classList.remove("open");
+//       navigation.classList.remove("hamburger");
+//       menuOpen = false;
+// })
 
 
 // toggle accordian
@@ -323,3 +323,10 @@ for (let i = 0; i < tracksflipcard.length; i++) {
 
     });
 }
+
+const nav_ham = document.querySelector(".nav-ham");
+    const nav_ham_slide = document.querySelector(".nav-slide");
+    nav_ham.addEventListener("click", function () {
+      this.classList.toggle("is-active");
+      nav_ham_slide.classList.toggle("is-active");
+    });

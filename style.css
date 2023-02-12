@@ -3,10 +3,7 @@
 *{
     margin:0;
     padding: 0;
-}
-.nav{
-    /* background-color: rebeccapurple; */
-    min-height: 8vh;
+    /* overflow: hidden; */
 }
 
 
@@ -145,11 +142,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 @import url(https://fonts.googleapis.com/css?family=Ubuntu);
 @import url(https://fonts.googleapis.com/css?family=Roboto);
-* {
-    /* box-sizing: border-box; */
-    padding: 0;
-    margin: 0;
-}
+
 :root{
     --white: #e1ebdcff;
     --black:#101010;
@@ -166,162 +159,114 @@ html {
     /* overflow-x: hidden; */
 }
 
-p::selection{
+/* p::selection{
     color: red;
-}
+} */
 
-.navbar{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 3rem;
+/* nav  */
+
+#nav{
+    /* position: fixed; */
+    z-index: 1000;
+    overflow: hidden;
+}
+.nav-container{
+    background-color: aliceblue;
+    height: 60px;
+    z-index: 99;
     width: 100%;
-    position: sticky;
-    top: 0px;
-    left: 0px;
-    border-bottom: 1px solid var(--black);
-    z-index: 999;
-    background-color: white;
-}
-.navigation{
     display: flex;
-    justify-content: center;
+    position: fixed;
     align-items: center;
-    gap: 1rem;
+    justify-content: flex-end;
 }
 
-.logo{
-    border-right: 1px solid var(--black);
+.nav-slide{
+    position: fixed;
+    right: 0;
+    height: 100vh;
+    background-color: aliceblue;
+    width: 50vw;
+    transition: 0.4s;
+    /* display: none; */
+    transform: translateX(50vw);
+    z-index: 99999;
+
 }
 
-.logo img{
-    max-width: 10rem;
-    margin: 1.2rem 2rem 1rem;
-    cursor: pointer;
+.nav-slide.is-active{
+    /* display: flex; */
+    margin-top: 60px;    
+    transform: translateX(0vw);
 }
 
-li{
-    list-style: none;
-}
-
-.navigation li a{
-    color: var(--black);
-    /* font-family: 'Roboto'; */
-
-    font-family: 'Bebas Neue', cursive;
-
-    display: inline-block;
-    text-decoration: none;
-    cursor: pointer;
-    border-bottom: 2px solid transparent;
-    transition: 0.3s ease-in;
-    margin: 0.7rem 1rem 0.4rem;
-    font-size: 1.4rem;
-    padding-bottom: 0.3rem;
-}
-.navigation li a:hover{
-    border-color: var(--primary-color);
-}
-.navigation:hover li a:not(:hover){
-    opacity: 0.3;
-    filter: blur(1px);
-}
-.menu-btn{
-    width: 1.8rem;
-    height: 1.8rem;
+.nav-menu{
     display: none;
-    flex-direction: column;
-    align-items:center;
-    justify-content:center;
-    transition: all 0.5s ease-in-out;
+}
+
+.nav-ham{
+    /* justify-self: flex-end; */
+    /* display: block; */
     position: relative;
-    cursor: pointer;
-    margin-right: 1.5rem;
 }
-.menu-btn_burger{
-    width: 1.8rem;
-    height: 0.1rem;
-    background-color: var(--black);
-    border-radius: 1rem;
-    transition: all 0.5s ease-in-out;
-}
-.menu-btn_burger::before,.menu-btn_burger::after{
-    content: '';
-    position: absolute;
-    width: 1.8rem;
-    height: 0.1rem;
-    background-color: var(--black);
-    border-radius: 1rem;
-    transition: all 0.5s ease-in-out;
-}
-.menu-btn_burger::before{
-    transform: translateY(-0.5rem);
-}
-.menu-btn_burger::after{
-    transform: translateY(0.5rem);
+.nav-ham span{
+    display: block;
+    width: 33px;
+    height: 4px;
+    background-color: black;
+    margin-bottom: 5px;
+    position: relative;
+    z-index: 1;
+    transform-origin: 0 0;
+    transition: 0.4s;
 }
 
-/* Animation */
-.menu-btn.open .menu-btn_burger {
-    transform: translateX(-50px);
-    background: transparent;
-  }
-  .menu-btn.open .menu-btn_burger::before {
-    transform: rotate(45deg) translate(35px, -35px);
-  }
-  .menu-btn.open .menu-btn_burger::after {
-    transform: rotate(-45deg) translate(35px, 35px);
-  }
+.nav-ham.is-active:hover span{
+    background-color: #00d029;
+}
 
-  /* Responsive navbar */
-@media screen and (width <= 48rem) {
-    .navbar{
-        justify-content: space-between;
+.nav-ham:hover span:nth-child(2){
+    transform:translateX(10px);
+    background-color: #00d029;
+}
+
+/* .nav-ham span:nth-child(2){
+    transition: 0.8s ease-in-out;
+} */
+
+.nav-ham.is-active span:nth-child(1){
+    transform:translate(0px,-2px) rotate(45deg)
+}
+
+.nav-ham.is-active span:nth-child(2){
+    opacity: 0;
+    transform:translate(15px);
+}
+.nav-ham.is-active span:nth-child(3){
+    transform:translate(-3px,3px) rotate(-45deg)
+}
+
+@media(min-width:768px){
+    .nav-ham{
+        display: none;
     }
-    .navigation{
-        overflow-y: hidden;
-        flex-direction: column;
-        position: absolute;
-        width: 100%;
-        height: 100vh;
-        background-color: var(--opacity-green);
-        top: 3.593rem;
-        left: 0;
-        transition: all .5s linear;
-        gap: 0;
-        padding: 1rem 2rem;
-        transform: scale(0);
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-        overflow-x: hidden;
-        transition: all 0.4s ease-in;
-    }
-    .navigation li a{
-        font-size: 1.5rem;
-    }
-    .navigation:hover li a:not(:hover){
-        opacity: 1;
-        filter: blur(0);
-    }
-    .navigation.hamburger{
-        visibility: visible;
-        pointer-events: all;
-        overflow-x: auto;
-        opacity: 1;
-        transform: scale(1);
-    }
-    .navigation li a:hover{
-        border-color: var(--white);
-    }
-    .menu-btn{
-        display: flex;
-    }
-    .logo{
-        border: none;
+    .nav-menu{
+        display: block;
     }
 }
 
+
+
+
+
+
+
+
+
+
+/* <a href="https://www.flaticon.com/free-icons/video-game" title="video game icons">Video game icons created by Freepik - Flaticon</a> */
+/* <a href="https://www.flaticon.com/free-icons/chip" title="chip icons">Chip icons created by Freepik - Flaticon</a>
+/* <a href="https://www.flaticon.com/free-icons/hiring" title="hiring icons">Hiring icons created by Uniconlabs - Flaticon</a> */
 
 
 /* /highlights  */
@@ -728,8 +673,10 @@ h2 {
     background-color: #fff;
     font-family: "Capsule Sans Display",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
 
-    color: black;
+    color: rgba(0, 0, 0, 0.534);
+    font-size: 0.6rem;
     transform: rotateY(180deg); 
+    display: flex;justify-content: center;align-items: center;
   }
 
 
