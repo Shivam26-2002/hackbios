@@ -310,3 +310,21 @@ const nav_ham = document.querySelector(".nav-ham");
       this.classList.toggle("is-active");
       nav_ham_slide.classList.toggle("is-active");
     });
+
+
+
+    //schedule
+const TL_switch = document.querySelectorAll('.TL-switch')[0].children;
+for(var i = 0;i<TL_switch.length;i++){
+  const j = i;
+  const s = document.querySelectorAll('.timeline-W');
+  TL_switch[i].addEventListener('click',()=>{
+
+    if(!s[j].classList.contains('timeline-active')){
+      s[j].classList.add('timeline-active');
+      s[(j+1)%2].classList.remove('timeline-active');
+      TL_switch[j].classList.add('TL-day-active');
+      TL_switch[(j+1)%2].classList.remove('TL-day-active');
+    }
+  })
+}
