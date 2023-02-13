@@ -43,18 +43,18 @@
     <section id="home-section">
       <!-- <div class="nav"></div> -->
 
-      <canvas id="playArea"></canvas>
+      <div class="playAreaC">
+        <canvas id="playArea"></canvas>
+      </div>
 
       <div id="home">
         <div id="home-center">
-          <a href="https://storyset.com/nature">
-            <img
-              id="home-center-image"
-              src="images/Iceberg.png"
-              alt=""
-              srcset=""
-            />
-          </a>
+          <img
+            id="home-center-image"
+            src="images/Iceberg.png"
+            alt=""
+            srcset=""
+          />
 
           <div class="home-upper-text">
             <div class="home-u-text-1">SHRI SHANKRACHARYA TECHNICAL CAMPUS</div>
@@ -69,11 +69,12 @@
           <div class="home-l-text">
             <p>XY MARCH 2023</p>
           </div>
+        </div>
 
-          <div class="home-register">
-            <button onclick="f()">Register</button>
-            <button onclick="f()">Discord</button>
-          </div>
+        <div class="home-register">
+          <div>Register Now</div>
+
+          <div>Join Us On Discord</div>
         </div>
       </div>
     </section>
@@ -118,7 +119,7 @@
         <div class="HL-box HL-box-1 HL-box-L">
           <p class="HL-head">Mentorship</p>
           <div class="HL-icon">
-            <img src="images/education.png" alt="" srcset="" />
+            <img src="images/lecture.png" alt="" srcset="" />
           </div>
           <p class="HL-para">
             Provide mentorships during and pre-hackathon <br />seminar and
@@ -483,29 +484,94 @@
     </section>
   </body>
 
-  <footer id="foot">
-    Illustrations : <br />
-    <a href="https://storyset.com/nature">Nature illustrations by Storyset</a
-    ><br />
-    <a href="https://storyset.com/people">People illustrations by Storyset</a
-    ><br />
-    <a href="https://storyset.com/technology"
-      >Technology illustrations by Storyset</a
-    ><br />
-    <a href="https://storyset.com/learn">Learn illustrations by Storyset</a
-    ><br />
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>Follow us</h4>
+          <div class="social-links">
+            <!-- <a href="#"><i class="fa-brands fa-twitter"></i></a> -->
+            <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <!-- <a href="#"><i class="fab fa-instagram"></i></a> -->
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <!-- <a href="#"><i class="fab fa-linkedin"></i></a> -->
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <!-- <a href="#"><i class="fab fa-youtube"></i></a> -->
+            <a href="#"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
 
-    <a
-      href="https://www.flaticon.com/free-icons/video-game"
-      title="video game icons"
-      >Video game icons created by Freepik - Flaticon</a
-    ><br />
-    <a href="https://www.flaticon.com/free-icons/chip" title="chip icons"
-      >Chip icons created by Freepik - Flaticon</a
-    ><br />
-    <a href="https://www.flaticon.com/free-icons/hiring" title="hiring icons"
-      >Hiring icons created by Uniconlabs - Flaticon</a
-    ><br />
+        <div class="footer-col">
+          <h4>Documents</h4>
+          <ul>
+            <li><a href="#">Code of Conduct</a></li>
+            <li><a href="#">Download Prospectus</a></li>
+            <!-- <li><a href="#">Privacy Policy</a></li> -->
+            <!-- <li><a href="#">Affiliate Program</  a></li> -->
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Illustrations</h4>
+          <ul>
+            <li>
+              <a href="https://storyset.com/nature"
+                >Nature illustrations by Storyset</a
+              >
+            </li>
+            <li>
+              <a href="https://storyset.com/people"
+                >People illustrations by Storyset</a
+              >
+            </li>
+            <li>
+              <a href="https://storyset.com/technology"
+                >Technology illustrations by Storyset</a
+              >
+            </li>
+            <li>
+              <a href="https://storyset.com/learn"
+                >Learn illustrations by Storyset</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Icons</h4>
+          <ul>
+            <li>
+              <a
+                href="https://www.flaticon.com/free-icons/video-game"
+                title="video game icons"
+                >Video game icons created by Freepik - Flaticon</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.flaticon.com/free-icons/chip"
+                title="chip icons"
+                >Chip icons created by Freepik - Flaticon</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.flaticon.com/free-icons/hiring"
+                title="hiring icons"
+                >Hiring icons created by Uniconlabs - Flaticon</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.flaticon.com/free-icons/training"
+                title="training icons"
+                >Training icons created by Eucalyp - Flaticon</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </footer>
 
   <script

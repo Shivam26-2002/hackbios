@@ -1,5 +1,3 @@
-
-
 window.requestAnimFrame = (function(){
   return  window.requestAnimationFrame       ||
           window.webkitRequestAnimationFrame ||
@@ -9,48 +7,16 @@ window.requestAnimFrame = (function(){
           };
 })();
 
-
-
-// $(function(){
-//   });
-
 document.addEventListener("DOMContentLoaded", function() {
-
-
-
-// $(window).resize(function(){    
-// });
 window.addEventListener("resize", function(){
-
-  
-  // $("#playArea").attr({
-  //       'width': $('.home').width(),
-  //       'height': $('.home').height()
-  //     });
   document.getElementById("playArea").setAttribute("width",document.getElementById("home").clientWidth);
   document.getElementById("playArea").setAttribute("height",document.getElementById("home").clientHeight);
-  //
-
-
         width = document.getElementById("home").clientWidth;
         height =document.getElementById("home").clientHeight;
-
-        
 })
 
-
-// $(window).resize();
 window.dispatchEvent(new Event('resize'));
-
 });
-
-
-
-
-// item.setAttribute('href');
-
-
-
 
 var Point = function(){
   this._size = 0.5;
@@ -163,7 +129,19 @@ var Point = function(){
 
 var aPoints = [];
 var can, ctx, interval, width, height;
+
+//points 
+const screenw = window.screen.availWidth;
+console.log(screenw);
 var numPoints = 30;
+if(screenw < 672){
+  numPoints = 15;
+}
+if(screenw < 400){
+  numPoints = 10;
+}
+
+
 /* var distanceTreshold = 100; */
 
 function init() {
@@ -171,7 +149,9 @@ function init() {
   ctx = can.getContext("2d");
   height = document.getElementById("home").clientHeight;
   width = document.getElementById("home").clientWidth;
-  console.log(height);
+
+  ww = document.getElementById("home-section").clientHeight;
+  // console.log('d',height);
 
   // width = document.getElementById('home').
 
