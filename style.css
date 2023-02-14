@@ -1114,3 +1114,112 @@ h2 {
     }
 }
 
+
+
+
+
+
+/* Used Flex wrap for responsivness */
+
+
+.sponsors-heading {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.sponsors-heading::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 5px;
+    background: #00d029;
+    /* bottom: 0; */
+    top: 115px;
+    left: calc(50% - 25px);
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.sponsor-desc {
+    font-size: 18px;
+    font-weight: 500;
+    color: #9195a2;
+}
+
+.flex-fill {
+    flex: 1 1 auto !important;
+}
+
+.dropdown-divider {
+    height: 0;
+    margin: 0.5rem 0;
+    overflow: hidden;
+    border-top: 1px solid rgba(0, 0, 0, .15);
+}
+
+.diamond-heading {
+    color: #6c757d !important;
+    text-align: center;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.sponsor-title {
+    height: 50px;
+}
+
+.d-flex {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+}
+
+.dev-git {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.supporters-logo {
+    margin-bottom: 50px;
+}
+
+.supporters-logo img {
+    max-width: 250px !important;
+    transition: transform 1s;
+}
+
+.supporters-logo img:hover{
+    transform: scale(1.1);
+}
+
+.polygon-divi {
+    /* display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.gold-sponsors{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    /* margin-bottom: -70px; */
+}
+
+.bronze-sponsors img{
+    height: 200px;
+    width: 200px;
+}
